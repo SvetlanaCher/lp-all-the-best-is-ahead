@@ -1,0 +1,342 @@
+@font-face {
+  font-family: "SuisseIntl-Regular";
+  src: url("fonts/SuisseIntl-Regular.otf");
+}
+
+@font-face {
+  font-family: "SuisseIntl-Bold";
+  src: url("fonts/SuisseIntl-Bold.otf");
+}
+
+html {
+  background: #2C2C2C;
+  color: #fff;
+  width: 1920px;
+  height: 720px;
+}
+
+html .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-style: normal;
+}
+
+html .container .burger-container {
+  position: absolute;
+  left: 117px;
+  top: 70px;
+  cursor: pointer;
+}
+
+html .container .burger-container .burger-menu {
+  margin: 0;
+}
+
+html .container .burger-container .burger-menu .burger-icon {
+  width: 20px;
+  height: 25px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+html .container .burger-container .burger-icon:hover {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media (max-width: 768px) and (max-height: 484px) {
+  html .container .burger-container {
+    left: 40px;
+    top: 30px;
+  }
+  html .container .burger-container .burger-menu .burger-icon {
+    width: 5px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 536px) {
+  html .container .burger-container {
+    grid-area: button;
+    left: 30px;
+    top: 30px;
+  }
+  html .container .burger-container .burger-menu .burger-icon {
+    width: 5px;
+    height: 10px;
+  }
+}
+
+html .container .title {
+  width: 40%;
+  margin: 15% 0% 15% 4%;
+  letter-spacing: 0.15px;
+  caret-color: transparent;
+}
+
+html .container .title .title-text {
+  font-family: "SuisseIntl-Regular";
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  position: static;
+}
+
+html .container .title .title-name {
+  font-family: "SuisseIntl-Bold";
+  font-size: 52px;
+  line-height: 58px;
+  margin: 0;
+  width: 416px;
+  position: static;
+}
+
+@media (max-width: 1440px) and (max-height: 720px) {
+  html .container .title {
+    margin: 20% 10%;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 484px) {
+  html .container .title {
+    margin: 21% 4%;
+  }
+  html .container .title .title-text {
+    font-size: 23px;
+    line-height: 8px;
+    padding-bottom: 9px;
+  }
+  html .container .title .title-name {
+    font-size: 54px;
+    line-height: 53px;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 536px) {
+  html .container .title {
+    grid-area: title;
+    margin: 10% 0%;
+    width: 100%;
+  }
+  html .container .title .title-text {
+    font-size: 12px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  html .container .title .title-name {
+    font-size: 32px;
+    line-height: 36px;
+    margin: 0;
+    width: 343px;
+  }
+}
+
+html .container .info {
+  width: 60%;
+  text-align: end;
+}
+
+html .container .info .input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  background-color: #fff;
+  caret-color: transparent;
+  width: 280px;
+  height: 44px;
+  border-radius: 34px;
+  margin-top: 32px;
+}
+
+html .container .info .input-block .input {
+  font-family: "SuisseIntl-Regular";
+  font-size: 14px;
+  caret-color: #5E5E5E;
+  height: 40px;
+  margin-left: 22px;
+  border: none;
+  position: relative;
+}
+
+html .container .info .input-block .input-text {
+  font-family: "SuisseIntl-Regular";
+  font-size: 14px;
+  color: #5E5E5E;
+  caret-color: transparent;
+  position: absolute;
+  left: 22px;
+  top: 13px;
+  -webkit-transition: top ease-in 0.3s;
+  transition: top ease-in 0.3s;
+}
+
+html .container .info .input-block .input:focus {
+  outline: none !important;
+}
+
+html .container .info .input-block .input:focus + .input-text,
+html .container .info .input-block .input:not(:placeholder-shown) + .input-text {
+  font-size: 10px;
+  top: 2px;
+}
+
+html .container .info .input-block .search-block {
+  background: #FF7D5A;
+  border-radius: 18px;
+  margin-right: 6px;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html .container .info .input-block .search-block .search-icon {
+  caret-color: transparent;
+  cursor: pointer;
+  padding: 8px;
+}
+
+html .container .info .input-block .search-block .search-text {
+  font-family: "SuisseIntl-Regular";
+  font-size: 14px;
+  right: 12px;
+  top: 14px;
+  display: none;
+  position: absolute;
+}
+
+@media (max-width: 768px) and (max-height: 484px) {
+  html .container .info .input-block {
+    display: none;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 536px) {
+  html .container .info .input-block {
+    grid-area: input;
+    margin-left: 50px;
+    margin-top: 15px;
+    width: 250px;
+    height: 32px;
+    display: none;
+  }
+  html .container .info .input-block .input {
+    font-size: 12px;
+    height: 30px;
+  }
+  html .container .info .input-block .input-text {
+    top: 7px;
+  }
+  html .container .info .input-block .input:not(:placeholder-shown) + .input-text {
+    font-size: 8px;
+  }
+  html .container .info .input-block .search-block {
+    margin: 0;
+  }
+  html .container .info .input-block .search-block .search-text {
+    right: 12px;
+    top: 9px;
+    font-size: 12px;
+  }
+}
+
+html .container .info .picture-block {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+html .container .info .picture-block .picture-img {
+  margin-right: 96px;
+  width: 1010px;
+}
+
+@media (max-width: 1440px) and (max-height: 720px) {
+  html .container .info .picture-block .picture-img {
+    margin-right: 0px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 484px) {
+  html .container .info .picture-block {
+    right: 0;
+  }
+  html .container .info .picture-block .picture-img {
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    width: 462px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 536px) {
+  html .container .info .picture-block {
+    grid-area: img;
+    right: 0px;
+  }
+  html .container .info .picture-block .picture-img {
+    margin-right: 0px;
+    width: 360px;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 536px) {
+  html .container {
+    text-align: center;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'button input' 'title title' 'img img';
+    -ms-grid-rows: 70px 3fr;
+        grid-template-rows: 70px 3fr;
+    -ms-grid-columns: 2fr 3fr;
+        grid-template-columns: 2fr 3fr;
+  }
+}
+
+@media (max-width: 1440px) and (max-height: 720px) {
+  html {
+    width: 1440px;
+    height: 720px;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 484px) {
+  html {
+    width: 768px;
+    height: 484px;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 536px) {
+  html {
+    width: 360px;
+    height: 536px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
